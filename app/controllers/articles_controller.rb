@@ -1,8 +1,13 @@
 class ArticlesController < ApplicationController
+before_action :find_author, only: [:show, :new, :create, :edit]
 
-	def index
-			@articles = Article.order('updated_at desc')
-	end
+  def index
+     if params[:author_id]
+       @articles = Author.find(params[:author_id]).articles.order('updated_at desc')
+     else
+       @articles = Article.order('updated_at desc')
+     end
+  end
 
 	def edit
 		@article.save!
@@ -10,6 +15,10 @@ class ArticlesController < ApplicationController
 
 	def new
 		@articles = Article.new
+	end
+
+	def show
+		@articles = Article.find(params[:id])
 	end
 
 	def create
@@ -21,4 +30,5 @@ class ArticlesController < ApplicationController
 	end
 
 end
+
 
