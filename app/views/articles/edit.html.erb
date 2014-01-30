@@ -1,0 +1,11 @@
+<h1>Edit Your Article</h1>
+
+<%=form_for @article do |form| %>
+	<%= form.label :title %>
+	<%= form.text_field :title, placeholder: 'Update title' %>
+
+
+	<%= form.label :body%>
+	<%= form.text_field :body, placeholder: 'Update body' %>
+	<%= form.submit %>
+<%end%>

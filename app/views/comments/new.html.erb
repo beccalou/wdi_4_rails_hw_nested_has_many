@@ -1,0 +1,6 @@
+<h1>Leave a comment</h1>
+
+<%=form_for @comment do |f| %>
+<%=f.text_area(:comment, :text, size: "20x30")%>
+<%=f.submit%>
+<%end%>

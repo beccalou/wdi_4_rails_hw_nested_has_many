@@ -1,0 +1,8 @@
+<h1>Author and Articles</h1>
+
+<%= @authors.each do |author|%>
+<h2><%=author.name%></h2>
+<h3><%=article.title%></h3>
+<p>truncate(article.body, length: 4)</p>
+<%end%>
+

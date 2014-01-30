@@ -2,7 +2,6 @@ SharedBlog::Application.routes.draw do
 resources :articles do
   resources :authors
     resources :comments
-    root to: "authors#index"
 end
 end
   # The priority is based upon order of creation: first created -> highest priority.
