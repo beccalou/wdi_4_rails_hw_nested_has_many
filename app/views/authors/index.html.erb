@@ -1,6 +1,6 @@
 <h1>All Authors</h1>
 
-<ol><%= @authors.each do |author|%>
-	<li><%=author.name%><%=author.email%></li>
+<ol><%@authors.each do |author|%>
+	<li><%=link_to author.name, author_path(author.id)%><%=author.email%></li>
 <%end%>
 <ol>

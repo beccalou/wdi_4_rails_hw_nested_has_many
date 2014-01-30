@@ -2,10 +2,10 @@
 
 <%=form_for @article do |form| %>
 	<%= form.label :title %>
-	<%= form.text_field :title, placeholder: 'Update title' %>
+	<%= form.text_field :title%>
 
 
 	<%= form.label :body%>
-	<%= form.text_field :body, placeholder: 'Update body' %>
+	<%= form.text_field :body %>
 	<%= form.submit %>
 <%end%>

@@ -1,6 +1,6 @@
 <h1>All Articles</h1>
 
-<p><%= @articles.each do |article|%></p>
+<p><%@articles.each do |article|%></p>
 	<a href="articles/edit/">Edit article</a>
 	<h2><%=article.title%></h2>
 	<p><%=truncate(article.body, length: 17)%></p>
